@@ -166,7 +166,7 @@ class Network(nn.Module):
             nn.Conv2d(48, 32, 1)
         )
 
-        self.conv192to32 = nn.Sequential(  # ADD THIS LAYER
+        self.conv192to32 = nn.Sequential( 
             nn.Conv2d(384, 96, 3, padding=1),  # For x2_x3 (192+192=384 channels)
             nn.BatchNorm2d(96),
             nn.ReLU(),
@@ -199,7 +199,7 @@ class Network(nn.Module):
         # Decoder with stable features
         self.decoder = UNetDecoder([channel]*4, channel)
         
-        # Camouflage-aware prediction head
+        # Prediction head
         self.head = nn.Sequential(
             nn.Conv2d(32, 32, 3, padding=1),
             nn.GELU(),

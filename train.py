@@ -109,12 +109,12 @@ def structure_loss(pred, mask):
     iou = 1 - (inter + 1) / (union - inter + 1)
     
     return (bce + iou).mean()
-
+'''''
 def edge_loss(pred, gt):
     pred_edge = F.conv2d(pred, torch.ones(1,1,3,3).to(pred.device))
     gt_edge = F.conv2d(gt, torch.ones(1,1,3,3).to(gt.device))
     return F.l1_loss(pred_edge, gt_edge)
-'''''
+
 #train function
 def train(train_loader, model, optimizer, epoch,save_path):
     #？

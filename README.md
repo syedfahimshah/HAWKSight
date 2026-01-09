@@ -29,3 +29,7 @@ precision (E-measure: 0.9451, 0.9611, 0.9751) and significantly
 reduces mean absolute error compared to existing methods,
 effectively resolving the speed-accuracy trade-off in aerial SOD
 applications.
+
+
+Date of Publication: 01 December 2025
+DOI: 10.1109/JSTARS.2025.3638685

@@ -12,10 +12,10 @@ from data import test_dataset
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 parser = argparse.ArgumentParser()
-parser.add_argument('--testsize', type=int, default=384, help='testing size')
+parser.add_argument('--testsize', type=int, default=352, help='testing size')
 parser.add_argument('--gpu_id', type=int, default=1, help='select gpu id')
 parser.add_argument('--test_path', type=str, default='E://Newfolder//Exp//ors-4199//Test//', help='test dataset path')
-parser.add_argument('--save_path', type=str, default='E://Models//Our//384/results', help='path to save test results')
+parser.add_argument('--save_path', type=str, default='E://Models//Our//352/results', help='path to save test results')
 parser.add_argument('--save_attention', action='store_true', default=True, help='save attention visualizations')
 parser.add_argument('--attention_interval', type=int, default=50, help='save attention every N images')
 opt = parser.parse_args()
